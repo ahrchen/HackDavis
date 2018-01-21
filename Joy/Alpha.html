@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <title>Alpha Joy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Alpha_files/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="Alpha_files/cover.css" rel="stylesheet">
+
+<script type="text/javascript">
+
+    function zoomin(){
+
+        var myImg = document.getElementById("flowerPot");
+
+        var currWidth = myImg.clientWidth;
+        var currHeight = myImg.clientHeight;
+
+
+        if(currWidth == 280){
+
+            alert("Maximum zoom-in level reached.");
+
+        } else{
+
+            myImg.style.width = (currWidth + 5) + "px";
+            myImg.style.height = (currHeight + 5) + "px";
+
+        } 
+
+    }
+
+    function zoomout(){
+
+        var myImg = document.getElementById("flowerPot");
+
+        var currWidth = myImg.clientWidth;
+        var currHeight = myImg.clientHeight;
+
+        if(currWidth == 50){
+
+            alert("Maximum zoom-out level reached.");
+
+        } else{
+
+            myImg.style.width = (currWidth - 5) + "px";
+            myImg.style.height = (currHeight - 5) + "px";
+
+        }
+
+    } 
+   </script>
+
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Alpha Joy</h3>
+          <nav class="nav nav-masthead justify-content-center">
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <img src="Alpha_files/joyJar.png" class="lead" id="flowerPot" width=200 height=312>
+      </main>
+ 
+      <footer class="mastfoot mt-auto">
+     <div class="container">
+      		
+            <button class="btn-deposit" data-toggle="modal" data-target="#addModal" onclick="zoomin()"></button>
+            <button class="btn-withdraw" data-toggle="modal" data-target="#deleteModal" onclick="zoomout()"></button>
+
+            <!--Add Modal -->
+    <div class="modal fade" id="addModal" role="dialog">
+    	<div class="modal-dialog">
+      <!-- Modal content-->
+      		<div class="modal-content">
+		        <div class="modal-header">
+		          <h4 class="modal-title">New Happy Moment</h4>
+		        </div>
+		        
+		        <div class="modal-body">
+		           <form>
+					 <div class="form-group">
+					  <textarea class="form-control" rows="5" id="comment"></textarea>			  
+		        	</div>
+		        	<button data-toggle="modal" data-target="#joyModal" class="btn btn-joy">Joy</button> 
+		        	<form>
+		        </div>
+		        
+		        <div class="modal-footer">
+		          
+		        </div>
+    		</div>
+  		</div>
+	</div>
+     <!--Delete Modal -->
+    <div class="modal fade" id="deleteModal" role="dialog">
+    	<div class="modal-dialog">
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h4 class="modal-title">My Happy Moments</h4>
+	        </div>
+	        <div class="modal-body">
+	          <p>I am grateful for hackathon</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-joy" data-dismiss="modal">Lets Go</button>
+	        </div>
+	      </div>
+    	</div>
+  	</div>
+ <!--Joy Modal -->
+    <div class="modal fade" id="joyModal" role="dialog">
+    	<div class="modal-dialog">
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h4 class="modal-title">Success</h4>
+	        </div>
+	        <div class="modal-body">
+	          <p>I am grateful for hackathon.</p>
+	        </div>
+	      </div>
+    	</div>
+  	</div>
+   </div>
+      <hr><hr>
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+     
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="Alpha_files/jquery-3.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="Alpha_files/popper.js"></script>
+    <script src="Alpha_files/bootstrap.js"></script>
+  
+
+</body>
+
+</html>
